@@ -1,16 +1,19 @@
 {
-  "name": "react-native-i18n",
-  "version": "2.0.6",
-  "description": "Provide I18n to your React Native application",
+  "name": "react-native-i18n-expo",
+  "version": "1.0.0",
+  "description": "Provide I18n to your React Native Expo application",
   "license": "MIT",
-  "author": "Alexander Zaytsev",
+  "author": "Yunus Saha",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "github.com/AlexanderZaytsev/react-native-i18n.git"
+    "url": "github.com/XeniousSoftware/react-native-i18n-expo.git"
   },
-  "keywords": ["react-native", "react-component", "ios", "i18n"],
+  "keywords": ["react-native", "react-component", "ios", "i18n","expo"],
   "dependencies": {
     "i18n-js": "github:fnando/i18n-js#v3.0.1"
+  },
+  "peerDependencies": {
+    "expo": ">=16.0.0"
   }
 }

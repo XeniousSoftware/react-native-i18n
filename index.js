@@ -1,13 +1,11 @@
 // @flow
 
-const RNI18n = require('react-native').NativeModules.RNI18n;
+import Expo from 'expo';
 const I18nJs = require('i18n-js');
 
-if (typeof RNI18n !== 'undefined') {
-  I18nJs.locale = RNI18n.languages[0];
-} else if (__DEV__) {
-  console.warn('react-native-i18n module is not correctly linked');
-}
+Expo.Util.getCurrentLocaleAsync().then(locale=>{
+	I18nJs.locale = (locale) ? locale.replace(/_/, '-') : '';
+});
 
-export const getLanguages = RNI18n.getLanguages;
+export const getLanguages = [];
 export default I18nJs;
